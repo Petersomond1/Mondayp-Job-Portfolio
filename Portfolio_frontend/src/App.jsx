@@ -32,14 +32,14 @@ function App() {
 
       <nav>
         <a href="#" className="logo">
-          <h1>Mondayp</h1>
+          <h1>Engr Mondayp</h1>
           <h3>Job Portfolio</h3>
         </a>
 
         <ul className="links">
           <li><a href="#home"><span style={{ marginLeft: "0px", marginBottom: '10px' }}>Home</span></a></li>
           <li><a href="#about"><span style={{ marginLeft: "25px" }}>About Mondayp</span></a></li>
-          <li><a href="#techs"><span style={{ marginLeft: "45px" }}>Services Techs & Video presentations</span></a></li>
+          <li><a href="#techs-Services"><span style={{ marginLeft: "45px" }}>Services Techs & Video presentations</span></a></li>
           <li><a href="#contact"><span style={{ marginLeft: "85px" }}>Contact Me</span></a></li>
         </ul>
 
@@ -62,8 +62,8 @@ function App() {
         {/* </div> */}
         <hr className="hr" />
         <div className='intro'>
-          <h3><span><big style={{ fontSize: '25px', fontWeight: 'bolder' }}>"Monday the Programmer" </big> is what friends like you call me</span></h3>
-          <h3><span><big style={{ fontSize: '25px', fontWeight: 'bolder' }}>Mondayp </big>is a Web Developer & a Mechanical Engineer</span></h3>
+          <h3><span><big style={{ fontSize: '25px', fontWeight: 'bolder' }}>"Mondayp" </big> is what friends like you call me</span></h3>
+          <h3><span><big style={{ fontSize: '25px', fontWeight: 'bolder' }}>Mondayp </big>is a Web Developer & a Mechanical Engineer,</span></h3>
           <h3><span><big style={{ fontSize: '25px', fontWeight: 'bolder' }}>Mondayp</big> is based in Atlanta, GA, USA.</span></h3>
           <h3><span><big style={{ fontSize: '25px', fontWeight: 'bolder' }}>Mondayp</big> is job ready !   </span></h3>
           <h3><span><big style={{ fontSize: '25px', fontWeight: 'bolder' }}>Mondayp</big> is looking for a Software Engineering Position and is very enthusiastic to joining any team that's open to future direction in in-depth emerging software techs and core-specialization.</span> </h3>
@@ -86,7 +86,7 @@ function App() {
         <div className="about-box" id="about">
 
           <div className="about-info">
-            <h2><span>About Mondayp</span></h2>
+            <h2><span>About Engr. Mondayp</span></h2>
          </div>
         
             <div className="skills-heading">
@@ -140,10 +140,16 @@ function App() {
           
           </div> 
           <img src="src/assets/picture pax.jpg" alt="" className='about-image' />
-         <div className="skill">   
-        <div className='skills-showcase'>
-          <h3><span> Links to Videos to Showcase Skills</span></h3>
-          </div>
+        
+        </div>
+         
+
+      </section>
+
+      <section className="techs-Services" id="techs-Services">
+       <h1 className='header'><span>Techs & Services</span></h1>
+       <h3 className='skills-smallheader'><span> Links to Videos to Showcase use of skill </span></h3>
+         
           <div className='skills'>
           <ul>
             <li><span><i className='bx bx-chevron-right'></i>React.js</span></li>
@@ -198,31 +204,93 @@ function App() {
           </ul>
         </div>
 
+        {/* </div> */}
+      <div className="techs-Services-container">
+        <div className="box">
+          <h1><span>Web Design</span></h1>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis nam dolores natus fugit possimus quod commodi modi repudiandae et ipsum corporis blanditiis molestias deserunt eveniet quis, fugiat quidem? Dolorum, commodi?</p>
+       <img src="src\assets\pix.JPG" alt="" />
         </div>
+        <div className="box">
+          <h1><span>Web Design</span></h1>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis nam dolores natus fugit possimus quod commodi modi repudiandae et ipsum corporis blanditiis molestias deserunt eveniet quis, fugiat quidem? Dolorum, commodi?</p>
+       <img src="src\assets\pix.JPG" alt="" />
         </div>
-         
-
+        <div className="box">
+          <h1><span>Web Design</span></h1>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis nam dolores natus fugit possimus quod commodi modi repudiandae et ipsum corporis blanditiis molestias deserunt eveniet quis, fugiat quidem? Dolorum, commodi?</p>
+       <img src="src\assets\pix.JPG" alt="" />
+        </div>
+        <div className="box">
+          <h1><span>Web Design</span></h1>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis nam dolores natus fugit possimus quod commodi modi repudiandae et ipsum corporis blanditiis molestias deserunt eveniet quis, fugiat quidem? Dolorum, commodi?</p>
+       <img src="src\assets\pix.JPG" alt="" />
+        </div> 
+      </div>
+      <div className="techs-Services-container">
+        <div className="box">
+          <h1><span>Web Design</span></h1>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis nam dolores natus fugit possimus quod commodi modi repudiandae et ipsum corporis blanditiis molestias deserunt eveniet quis, fugiat quidem? Dolorum, commodi?</p>
+       <img src="src\assets\pix.JPG" alt="" />
+        </div>
+        <div className="box">
+          <h1><span>Web Design</span></h1>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis nam dolores natus fugit possimus quod commodi modi repudiandae et ipsum corporis blanditiis molestias deserunt eveniet quis, fugiat quidem? Dolorum, commodi?</p>
+       <img src="src\assets\pix.JPG" alt="" />
+        </div>
+        <div className="box">
+          <h1><span>Web Design</span></h1>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis nam dolores natus fugit possimus quod commodi modi repudiandae et ipsum corporis blanditiis molestias deserunt eveniet quis, fugiat quidem? Dolorum, commodi?</p>
+       <img src="src\assets\pix.JPG" alt="" />
+        </div>
+        <div className="box">
+          <h1><span>Web Design</span></h1>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis nam dolores natus fugit possimus quod commodi modi repudiandae et ipsum corporis blanditiis molestias deserunt eveniet quis, fugiat quidem? Dolorum, commodi?</p>
+       <img src="src\assets\pix.JPG" alt="" />
+        </div>
+      </div>
+      </section>
+      <section id="contact">
+      <h1 className="header"><span>Contact</span></h1>
+      <form action="#">
+        <div className="input-box">
+          <span>Full Name</span>
+          <input type="text" placeholder='Enter Your Full Name'/>
+        </div>
+        <div className="input-box">
+          <span>Email</span>
+          <input type="email" placeholder='Enter Your Email'/>
+        </div>
+        <div className="input-box">
+          <span>Message</span>
+          <textarea placeholder='Enter Your Message'></textarea>
+        </div>
+        <div className="btttn">
+          <input type="submit" value="Send"/>
+        </div>
+      </form>
       </section>
 
-      <section className="techs" id="techs">
-        <div className="techs-info">
-          <h2><span>Services Techs</span></h2>
+      <footer>
+        <div className="col-left">
+          <div className="col-box">
+            <span>Mondayp</span>
+            <span>4105 Hawkins street, Atlanta, GA, USA</span>
+          </div>
+          <div className="col-box">
+            <span>work Phone</span>
+            <span>+1 6784208200</span>
+            </div>
+          <div className="col-box">
+            <span>Email</span>
+            <span>
+              <a href="mailto:petersomond@gmail.com">
+              petersomond@gmail.com </a>
+            </span>
+            </div>
         </div>
-        <div className="techs-box">
-          <div className="techs-card">
-            <h3>Frontend Development</h3>
-            <p>abc</p>
-          </div>
-          <div className="techs-card">
-            <h3>Backend Development</h3>
-            <p>abc</p>
-          </div>
-          <div className="techs-card">
-            <h3>FullStack Development</h3>
-            <p>abc</p>
-          </div>
-        </div>
-      </section>
+        <div className="col-right"></div>
+      </footer>
       </div>
     </>
   );
