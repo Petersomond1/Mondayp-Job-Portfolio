@@ -27,7 +27,7 @@ jobs:
         run: npm run build
 
       - name: Debug Build Directory
-        run: ls -la ./dist  # Ensure build files exist
+        run: ls -la ./dist 
 
       - name: Deploy to S3
         run: aws s3 sync ./dist s3://www.engineer-monday.com --delete
