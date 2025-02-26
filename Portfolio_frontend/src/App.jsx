@@ -55,7 +55,7 @@ function App() {
           <h3>Welcome!!</h3>
         </div>
         <hr className="hr" />
-        <img src="src/assets/picture pax.jpg" alt="" />
+        <img src="src/assets/picturepax.jpg" alt="" />
 
         {/* <div> */}
           <h2><span className='name'>I'm</span> <span>Monday-p</span> </h2>
@@ -139,7 +139,7 @@ function App() {
               </ul>
           
           </div> 
-          <img src="src/assets/picture pax.jpg" alt="" className='about-image' />
+          <img src="src/assets/picturepax.jpg" alt="" className='about-image' />
         
         </div>
          
