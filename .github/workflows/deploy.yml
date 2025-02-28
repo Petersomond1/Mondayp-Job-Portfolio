@@ -22,14 +22,14 @@ jobs:
 
       - name: Install Dependencies
         run: npm install
-        working-directory: ./Portfolio_frontend 
+        working-directory: ./Portfolio_frontend  # Ensure this path is correct
 
       - name: Build Project
         run: npm run build
-        working-directory: ./Portfolio_frontend  
+        working-directory: ./Portfolio_frontend  # Ensure this path is correct
 
       - name: Debug Build Directory
-        run: ls -la ./Portfolio_frontend/dist  
+        run: ls -la ./Portfolio_frontend/dist  # Ensure this path is correct
 
       - name: Deploy to S3
         run: aws s3 sync ./Portfolio_frontend/dist s3://www.engineer-monday.com --delete
