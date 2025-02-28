@@ -55,7 +55,7 @@ function App() {
           <h3>Welcome!!</h3>
         </div>
         <hr className="hr" />
-        <img src="src/assets/picturepax.jpg" alt="" />
+        <img src="./assets/picturepax.jpg" alt="" />
 
         {/* <div> */}
           <h2><span className='name'>I'm</span> <span>Monday-p</span> </h2>
@@ -139,7 +139,7 @@ function App() {
               </ul>
           
           </div> 
-          <img src="src/assets/picturepax.jpg" alt="" className='about-image' />
+          <img src="./assets/picturepax.jpg" alt="" className='about-image' />
         
         </div>
          
@@ -209,44 +209,44 @@ function App() {
         <div className="box">
           <h1><span>Web Design</span></h1>
           <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis nam dolores natus fugit possimus quod commodi modi repudiandae et ipsum corporis blanditiis molestias deserunt eveniet quis, fugiat quidem? Dolorum, commodi?</p>
-       <img src="src\assets\pix.JPG" alt="" />
+       <img src="./assets/pix.JPG" alt="" />
         </div>
         <div className="box">
           <h1><span>Web Design</span></h1>
           <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis nam dolores natus fugit possimus quod commodi modi repudiandae et ipsum corporis blanditiis molestias deserunt eveniet quis, fugiat quidem? Dolorum, commodi?</p>
-       <img src="src\assets\pix.JPG" alt="" />
+       <img src="./assets/pix.JPG" alt="" />
         </div>
         <div className="box">
           <h1><span>Web Design</span></h1>
           <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis nam dolores natus fugit possimus quod commodi modi repudiandae et ipsum corporis blanditiis molestias deserunt eveniet quis, fugiat quidem? Dolorum, commodi?</p>
-       <img src="src\assets\pix.JPG" alt="" />
+       <img src="./assets/pix.JPG" alt="" />
         </div>
         <div className="box">
           <h1><span>Web Design</span></h1>
           <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis nam dolores natus fugit possimus quod commodi modi repudiandae et ipsum corporis blanditiis molestias deserunt eveniet quis, fugiat quidem? Dolorum, commodi?</p>
-       <img src="src\assets\pix.JPG" alt="" />
+       <img src="./assets/pix.JPG" alt="" />
         </div> 
       </div>
       <div className="techs-Services-container">
         <div className="box">
           <h1><span>Web Design</span></h1>
           <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis nam dolores natus fugit possimus quod commodi modi repudiandae et ipsum corporis blanditiis molestias deserunt eveniet quis, fugiat quidem? Dolorum, commodi?</p>
-       <img src="src\assets\pix.JPG" alt="" />
+       <img src="./assets/pix.JPG" alt="" />
         </div>
         <div className="box">
           <h1><span>Web Design</span></h1>
           <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis nam dolores natus fugit possimus quod commodi modi repudiandae et ipsum corporis blanditiis molestias deserunt eveniet quis, fugiat quidem? Dolorum, commodi?</p>
-       <img src="src\assets\pix.JPG" alt="" />
+       <img src="./assets/pix.JPG" alt="" />
         </div>
         <div className="box">
           <h1><span>Web Design</span></h1>
           <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis nam dolores natus fugit possimus quod commodi modi repudiandae et ipsum corporis blanditiis molestias deserunt eveniet quis, fugiat quidem? Dolorum, commodi?</p>
-       <img src="src\assets\pix.JPG" alt="" />
+       <img src="./assets/pix.JPG" alt="" />
         </div>
         <div className="box">
           <h1><span>Web Design</span></h1>
           <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis nam dolores natus fugit possimus quod commodi modi repudiandae et ipsum corporis blanditiis molestias deserunt eveniet quis, fugiat quidem? Dolorum, commodi?</p>
-       <img src="src\assets\pix.JPG" alt="" />
+       <img src="./assets/pix.JPG" alt="" />
         </div>
       </div>
       </section>
