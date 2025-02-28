@@ -28,10 +28,6 @@ jobs:
         run: npm run build
         working-directory: ./Portfolio_frontend
 
-      - name: Debug Build Directory
-        run: ls -la ./Portfolio_frontend/dist/assets
-        working-directory: ./Portfolio_frontend
-
       - name: Deploy to S3
         run: aws s3 sync ./Portfolio_frontend/dist s3://www.engineer-monday.com --delete
 
