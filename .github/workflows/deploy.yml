@@ -29,7 +29,7 @@ jobs:
         working-directory: ./Portfolio_frontend
 
       - name: Debug Build Directory
-        run: ls -la ./Portfolio_frontend/dist/assets
+        run: ./Portfolio_frontend/dist/assets
         working-directory: ./Portfolio_frontend
 
       - name: Deploy to S3
