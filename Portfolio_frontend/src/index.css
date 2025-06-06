@@ -6,7 +6,7 @@
   width: 100%;
   height: 100%;
   z-index: 10000;
-  background-color: black;
+  background-color: rgba(0, 0, 0, 0.103);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -34,7 +34,8 @@
 :root {
   --background: white;
   --second-background: rgba(21, 21, 21);
-  --third-background: black;
+  --third-background: rgba(0, 0, 0, 0.918);
+  /* --third-background: white; */
   --primary-color: #00ff9d;
   --secondary-color: #007bff;
   --white-color: #ffffff;
@@ -147,7 +148,7 @@ padding-bottom: 2em;
 }
 section {
   padding: .5% .5%;
-    min-height: 88vh;
+    min-height: 40vh;
 }
 
 
@@ -159,7 +160,7 @@ section {
   /* margin-top: 1em;
   gap: .1em; */
   background-color: var(--third-background);
-  width: 700px;
+  width: 1800px;
   border: #007bff 6px solid;
   }
 

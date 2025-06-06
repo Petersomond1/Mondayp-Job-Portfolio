@@ -58,15 +58,15 @@ function App() {
         <img src="./assets/picturepax.jpg" alt="" />
 
         {/* <div> */}
-          <h2><span className='name'>I'm</span> <span>Monday-p</span> </h2>
+          <h2><span className='name'>I'm</span> <span>Monday</span> </h2>
         {/* </div> */}
         <hr className="hr" />
         <div className='intro'>
           <h3><span><big style={{ fontSize: '25px', fontWeight: 'bolder' }}>"Mondayp" </big> is what friends like you call me</span></h3>
-          <h3><span><big style={{ fontSize: '25px', fontWeight: 'bolder' }}>Mondayp </big>is a Web Developer & a Mechanical Engineer,</span></h3>
-          <h3><span><big style={{ fontSize: '25px', fontWeight: 'bolder' }}>Mondayp</big> is based in Atlanta, GA, USA.</span></h3>
-          <h3><span><big style={{ fontSize: '25px', fontWeight: 'bolder' }}>Mondayp</big> is job ready !   </span></h3>
-          <h3><span><big style={{ fontSize: '25px', fontWeight: 'bolder' }}>Mondayp</big> is looking for a Software Engineering Position and is very enthusiastic to joining any team that's open to future direction in in-depth emerging software techs and core-specialization.</span> </h3>
+          <h3><span><big style={{ fontSize: '25px', fontWeight: 'bolder' }}>Monday </big>is a Web Developer & a Mechanical Engineer,</span></h3>
+          <h3><span><big style={{ fontSize: '25px', fontWeight: 'bolder' }}>Monday</big> is based in Atlanta, GA, USA.</span></h3>
+          <h3><span><big style={{ fontSize: '25px', fontWeight: 'bolder' }}>Monday</big> is job ready !   </span></h3>
+          <h3><span><big style={{ fontSize: '25px', fontWeight: 'bolder' }}>Monday</big> is prepared to work in any Software Engineering Position and is very enthusiastic to joining any developers team that's open to creating future in today's in-depth emerging software technologies and core-specialization.</span> </h3>
         </div>
 
         <div className='intro2'>
@@ -80,8 +80,32 @@ function App() {
           <div className="bttn">Contact</div>
         {/* </div> */}
       </section>
-
-
+      <hr className="hr" style={{ marginTop: '25px', marginBottom: '25px' }} />
+      <section>
+      <div className="techs-Services-container">
+        <div className="box">
+          <h1><span>Web Design</span></h1>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis nam dolores natus fugit possimus quod commodi modi repudiandae et ipsum corporis blanditiis molestias deserunt eveniet quis, fugiat quidem? Dolorum, commodi?</p>
+       <img src="./assets/pix.JPG" alt="" />
+        </div>
+        <div className="box">
+          <h1><span>Web Design</span></h1>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis nam dolores natus fugit possimus quod commodi modi repudiandae et ipsum corporis blanditiis molestias deserunt eveniet quis, fugiat quidem? Dolorum, commodi?</p>
+       <img src="./assets/pix.JPG" alt="" />
+        </div>
+        <div className="box">
+          <h1><span>Web Design</span></h1>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis nam dolores natus fugit possimus quod commodi modi repudiandae et ipsum corporis blanditiis molestias deserunt eveniet quis, fugiat quidem? Dolorum, commodi?</p>
+       <img src="./assets/pix.JPG" alt="" />
+        </div>
+        <div className="box">
+          <h1><span>Web Design</span></h1>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis nam dolores natus fugit possimus quod commodi modi repudiandae et ipsum corporis blanditiis molestias deserunt eveniet quis, fugiat quidem? Dolorum, commodi?</p>
+       <img src="./assets/pix.JPG" alt="" />
+        </div> 
+      </div>
+      </section>
+      <hr className="hr" style={{ marginTop: '25px', marginBottom: '25px' }} />
       <section>
         <div className="about-box" id="about">
 
@@ -205,28 +229,9 @@ function App() {
         </div>
 
         {/* </div> */}
-      <div className="techs-Services-container">
-        <div className="box">
-          <h1><span>Web Design</span></h1>
-          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis nam dolores natus fugit possimus quod commodi modi repudiandae et ipsum corporis blanditiis molestias deserunt eveniet quis, fugiat quidem? Dolorum, commodi?</p>
-       <img src="./assets/pix.JPG" alt="" />
-        </div>
-        <div className="box">
-          <h1><span>Web Design</span></h1>
-          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis nam dolores natus fugit possimus quod commodi modi repudiandae et ipsum corporis blanditiis molestias deserunt eveniet quis, fugiat quidem? Dolorum, commodi?</p>
-       <img src="./assets/pix.JPG" alt="" />
-        </div>
-        <div className="box">
-          <h1><span>Web Design</span></h1>
-          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis nam dolores natus fugit possimus quod commodi modi repudiandae et ipsum corporis blanditiis molestias deserunt eveniet quis, fugiat quidem? Dolorum, commodi?</p>
-       <img src="./assets/pix.JPG" alt="" />
-        </div>
-        <div className="box">
-          <h1><span>Web Design</span></h1>
-          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis nam dolores natus fugit possimus quod commodi modi repudiandae et ipsum corporis blanditiis molestias deserunt eveniet quis, fugiat quidem? Dolorum, commodi?</p>
-       <img src="./assets/pix.JPG" alt="" />
-        </div> 
-      </div>
+ 
+
+
       <div className="techs-Services-container">
         <div className="box">
           <h1><span>Web Design</span></h1>
