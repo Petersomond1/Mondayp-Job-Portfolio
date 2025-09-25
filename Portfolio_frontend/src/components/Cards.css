@@ -1,0 +1,450 @@
+/* Cards.css - Main Component Layout Styles */
+
+.portfolio-cards-section {
+  padding: 30px 5%;
+  background-color: var(--third-background);
+  text-align: center;
+  min-height: auto;
+}
+
+.portfolio-header {
+  margin-bottom: 20px;
+  color: var(--primary-color);
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.portfolio-header span {
+  display: inline-block;
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+/* Animated Deck Container */
+.deck-container {
+  position: relative;
+  height: 300px;
+  margin: 20px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.deck_of_cards {
+  position: relative;
+  width: 400px;
+  height: 250px;
+  cursor: pointer;
+  border-radius: 15px;
+  transition: all 0.3s ease;
+}
+
+.deck_of_cards:hover {
+  transform: scale(1.02);
+}
+
+/* Portfolio Display Section */
+.portfolio-display {
+  max-width: 600px;
+  margin: 30px auto;
+  padding: 20px;
+  background: linear-gradient(135deg, rgba(0, 255, 157, 0.1), rgba(0, 255, 157, 0.05));
+  border: 2px solid var(--primary-color);
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.displayed-card {
+  color: white;
+  text-align: center;
+  animation: slideIn 0.5s ease-out;
+}
+
+.displayed-card.stacked {
+  opacity: 0.7;
+}
+
+.card-title {
+  color: var(--primary-color);
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.card-description {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 15px;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.card-skill-level {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.skill-label {
+  font-weight: 600;
+  color: var(--primary-color);
+  font-size: 1rem;
+}
+
+.skill-stars {
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Instructions */
+.deck-instructions {
+  color: var(--primary-color);
+  font-size: 1.1em;
+  margin-bottom: 5px;
+  font-weight: 600;
+  animation: pulse 2s infinite;
+}
+
+.card-click-instruction {
+  color: var(--primary-color);
+  font-size: 1rem;
+  margin-top: 10px;
+  font-weight: 500;
+  animation: glow 2s ease-in-out infinite alternate;
+}
+
+.outside-click-instruction {
+  color: var(--primary-color);
+  font-size: 0.95rem;
+  margin-top: 8px;
+  font-weight: 500;
+  opacity: 0.8;
+  animation: fadeInOut 3s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 5px var(--primary-color);
+  }
+  to {
+    text-shadow: 0 0 20px var(--primary-color), 0 0 30px var(--primary-color);
+  }
+}
+
+@keyframes fadeInOut {
+  0%, 100% { opacity: 0.6; }
+  50% { opacity: 1; }
+}
+
+.portfolio-description {
+  color: white;
+  font-size: 1.2em;
+  margin-bottom: 20px;
+  max-width: 800px;
+  margin: 0 auto 20px;
+  line-height: 1.6;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* Suit Legend */
+.suit-legend {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  max-width: 800px;
+  margin: 0 auto 40px;
+  padding: 20px;
+  background-color: rgba(0, 255, 157, 0.1);
+  border-radius: 15px;
+  border: 2px solid var(--primary-color);
+  backdrop-filter: blur(10px);
+}
+
+.legend-item {
+  padding: 10px;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.legend-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.legend-hearts {
+  color: #dc2626;
+  background-color: rgba(220, 38, 38, 0.1);
+}
+
+.legend-diamonds {
+  color: #dc2626;
+  background-color: rgba(220, 38, 38, 0.1);
+}
+
+.legend-clubs {
+  color: #000;
+  background-color: white;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.legend-spades {
+  color: #000;
+  background-color: white;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+/* Cards Grid */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  justify-items: center;
+  padding: 20px 0;
+}
+
+/* Interactive Instructions */
+.interactive-instructions {
+  margin-top: 40px;
+  color: var(--primary-color);
+  font-size: 1.1em;
+  font-weight: 600;
+  background-color: rgba(0, 255, 157, 0.1);
+  padding: 15px;
+  border-radius: 10px;
+  border: 1px solid var(--primary-color);
+  max-width: 600px;
+  margin: 40px auto 0;
+}
+
+/* Loading animation for deck */
+.deck-loading {
+  opacity: 0;
+  animation: fadeIn 1s ease-in forwards;
+}
+
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .portfolio-cards-section {
+    padding: 40px 3%;
+  }
+  
+  .deck_of_cards {
+    width: 350px;
+    height: 220px;
+  }
+  
+  .portfolio-display {
+    max-width: 500px;
+    padding: 18px;
+  }
+  
+  .card-title {
+    font-size: 1.6rem;
+  }
+  
+  .card-description {
+    font-size: 1rem;
+  }
+  
+  .cards-grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .portfolio-cards-section {
+    padding: 30px 2%;
+  }
+  
+  .portfolio-header {
+    font-size: 2rem;
+    margin-bottom: 30px;
+  }
+  
+  .deck-container {
+    height: 250px;
+    margin: 30px auto;
+  }
+  
+  .deck_of_cards {
+    width: 300px;
+    height: 200px;
+  }
+  
+  .portfolio-display {
+    max-width: 400px;
+    padding: 15px;
+    margin: 25px auto;
+  }
+  
+  .card-title {
+    font-size: 1.4rem;
+    margin-bottom: 12px;
+  }
+  
+  .card-description {
+    font-size: 0.95rem;
+    margin-bottom: 12px;
+  }
+  
+  .card-skill-level {
+    flex-direction: column;
+    gap: 5px;
+  }
+  
+  .skill-label {
+    font-size: 0.9rem;
+  }
+  
+  .skill-stars {
+    font-size: 1rem;
+  }
+  
+  .portfolio-description {
+    font-size: 1em;
+    margin-bottom: 30px;
+  }
+  
+  .suit-legend {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+    padding: 15px;
+  }
+  
+  .cards-grid {
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 12px;
+  }
+  
+  .deck-instructions {
+    font-size: 1em;
+  }
+  
+  .card-click-instruction {
+    font-size: 0.9rem;
+  }
+  
+  .outside-click-instruction {
+    font-size: 0.85rem;
+  }
+  
+  .interactive-instructions {
+    font-size: 1em;
+    padding: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .portfolio-cards-section {
+    padding: 20px 2%;
+  }
+  
+  .portfolio-header {
+    font-size: 1.8rem;
+  }
+  
+  .deck-container {
+    height: 200px;
+  }
+  
+  .deck_of_cards {
+    width: 250px;
+    height: 150px;
+  }
+  
+  .portfolio-display {
+    max-width: 300px;
+    padding: 12px;
+    margin: 20px auto;
+  }
+  
+  .card-title {
+    font-size: 1.2rem;
+  }
+  
+  .card-description {
+    font-size: 0.9rem;
+  }
+  
+  .suit-legend {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  
+  .cards-grid {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 10px;
+  }
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .portfolio-header span,
+  .deck-instructions,
+  .card-click-instruction,
+  .outside-click-instruction,
+  .deck_of_cards,
+  .legend-item,
+  .displayed-card {
+    animation: none;
+  }
+  
+  .playing-card,
+  .deck-card {
+    transition: none;
+  }
+}
+
+/* High contrast mode */
+@media (prefers-contrast: high) {
+  .portfolio-display {
+    border: 3px solid var(--primary-color);
+  }
+  
+  .suit-legend {
+    border: 3px solid var(--primary-color);
+  }
+  
+  .legend-item {
+    border: 2px solid currentColor;
+  }
+  
+  .interactive-instructions {
+    border: 2px solid var(--primary-color);
+  }
+}
