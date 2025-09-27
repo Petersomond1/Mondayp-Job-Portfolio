@@ -1,8 +1,8 @@
 /* DeckCard.css - Animated Deck Card Styles */
 
 .deck-card {
-    width: 120px;
-    height: 170px;
+    width: 95px;
+    height: 135px;
     border-radius: 10px;
     position: absolute;
     cursor: pointer;
@@ -63,11 +63,11 @@
   }
   
   .deck-card-center-symbol {
-    font-size: 32px;
+    font-size: 24px;
   }
   
   .deck-card-center-joker {
-    font-size: 24px;
+    font-size: 18px;
   }
   
   .deck-card-joker-label {
@@ -113,8 +113,8 @@
   /* Responsive adjustments */
   @media (max-width: 768px) {
     .deck-card {
-      width: 100px;
-      height: 140px;
+      width: 80px;
+      height: 110px;
     }
     
     .deck-card-inner {
@@ -122,11 +122,11 @@
     }
     
     .deck-card-center-symbol {
-      font-size: 24px;
+      font-size: 18px;
     }
     
     .deck-card-center-joker {
-      font-size: 20px;
+      font-size: 15px;
     }
     
     .deck-card-corner-value {
@@ -140,15 +140,15 @@
   
   @media (max-width: 480px) {
     .deck-card {
-      width: 80px;
-      height: 110px;
+      width: 70px;
+      height: 95px;
     }
     
     .deck-card-center-symbol {
-      font-size: 20px;
-    }
-    
-    .deck-card-center-joker {
       font-size: 16px;
+    }
+
+    .deck-card-center-joker {
+      font-size: 12px;
     }
   }

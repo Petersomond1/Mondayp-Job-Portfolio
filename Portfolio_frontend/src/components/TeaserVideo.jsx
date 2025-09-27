@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useRef, useEffect } from 'react';
 import './TeaserVideo.css';
 
 const TeaserVideo = ({ showFullscreenVideo, onHideVideo }) => {
@@ -9,13 +9,26 @@ const TeaserVideo = ({ showFullscreenVideo, onHideVideo }) => {
     setTimeout(() => onHideVideo(), 2000);
   };
 
+  useEffect(() => {
+    if (showFullscreenVideo && fullscreenVideoRef.current) {
+      // Unmute the video for audio playback
+      fullscreenVideoRef.current.muted = false;
+      // Ensure video plays with audio
+      fullscreenVideoRef.current.play().catch(error => {
+        console.log('Auto-play with audio failed, keeping muted:', error);
+        fullscreenVideoRef.current.muted = true;
+        fullscreenVideoRef.current.play();
+      });
+    }
+  }, [showFullscreenVideo]);
+
   if (!showFullscreenVideo) return null;
 
   return (
     <div className="fullscreen-intro-overlay">
-      <video 
+      <video
         ref={fullscreenVideoRef}
-        autoPlay 
+        autoPlay
         muted
         loop
         className="teaser-video"

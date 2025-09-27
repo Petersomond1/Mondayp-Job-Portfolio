@@ -39,6 +39,19 @@ const portfolioData = [
         content: "Infrastructure management and cloud deployment strategies. I implement CI/CD pipelines and manage scalable cloud architectures for optimal performance.",
         image: "https://via.placeholder.com/400x200/ef4444/ffffff?text=DevOps",
         skills: ["AWS", "Docker", "Kubernetes", "CI/CD"]
+    },
+    {
+        title: "Data Science & AI",
+        content: "Machine learning algorithms and data analysis solutions. I implement predictive models and extract meaningful insights from complex datasets to drive business decisions.",
+        image: "https://via.placeholder.com/400x200/8b5cf6/ffffff?text=Data+Science",
+        skills: ["Python", "R", "TensorFlow", "Pandas"]
+    },
+    {
+        title: "Personal Introduction",
+        content: "Meet Mondayp - your next team member! Based in Atlanta, GA, I'm a passionate Web Developer and Mechanical Engineer ready to bring innovation to your projects.",
+        image: "./assets/picturepax.jpg",
+        skills: ["Full-Stack Development", "Problem Solving", "Team Collaboration", "Innovation"],
+        isPersonalIntro: true
     }
 ];
 
@@ -157,28 +170,63 @@ function Book() {
                     {portfolioData.map((item, index) => (
                         <div key={index} className="page content-page">
                             <div className="page-content">
-                                <h2 className="page-title">{item.title}</h2>
-                                
-                                <div className="portfolio-image">
-                                    <img src={item.image} alt={item.title} />
-                                </div>
-                                
-                                <div className="portfolio-text">
-                                    <p>{item.content}</p>
-                                </div>
-                                
-                                <div className="skills-section">
-                                    <h4>Technologies & Skills:</h4>
-                                    <div className="skills-list">
-                                        {item.skills.map((skill, skillIndex) => (
-                                            <span key={skillIndex} className="skill-badge">
-                                                {skill}
-                                            </span>
-                                        ))}
+                                {item.isPersonalIntro ? (
+                                    // Special layout for personal introduction
+                                    <div className="personal-intro-page">
+                                        <div className="welcome-section">
+                                            <h3>Welcome!!</h3>
+                                        </div>
+
+                                        <h2><span className='name'>I'm</span> <span>Monday</span></h2>
+                                        <hr className="intro-hr" />
+
+                                        <div className='intro-section'>
+                                            <p><strong>"Mondayp"</strong> is what friends like you call me</p>
+                                            <p><strong>Monday</strong> is a Web Developer & a Mechanical Engineer</p>
+                                            <p><strong>Monday</strong> is based in Atlanta, GA, USA</p>
+                                            <p><strong>Monday</strong> is job ready!</p>
+                                            <p><strong>Monday</strong> is prepared to work in any Software Engineering Position and is very enthusiastic about joining any developers team that's open to creating the future with today's in-depth emerging software technologies and core-specialization.</p>
+                                        </div>
+
+                                        <div className='intro2-section'>
+                                            <p>And as you can see, this is just a job portfolio to showcase my prowess/proficiency in this new career path with a glimpse of my coding skills and services using emerging techs, and to create a point of contact for recruiters/employers or clients like you to reach me.</p>
+                                        </div>
+
+                                        <div className='intro-buttons'>
+                                            <button className="hire-btn">Hire me</button>
+                                            <span>||</span>
+                                            <button className="contact-btn">Contact</button>
+                                        </div>
+
+                                        <div className="page-number">{index + 3}</div>
                                     </div>
-                                </div>
-                                
-                                <div className="page-number">{index + 3}</div>
+                                ) : (
+                                    // Regular portfolio page layout
+                                    <>
+                                        <h2 className="page-title">{item.title}</h2>
+
+                                        <div className="portfolio-image">
+                                            <img src={item.image} alt={item.title} />
+                                        </div>
+
+                                        <div className="portfolio-text">
+                                            <p>{item.content}</p>
+                                        </div>
+
+                                        <div className="skills-section">
+                                            <h4>Technologies & Skills:</h4>
+                                            <div className="skills-list">
+                                                {item.skills.map((skill, skillIndex) => (
+                                                    <span key={skillIndex} className="skill-badge">
+                                                        {skill}
+                                                    </span>
+                                                ))}
+                                            </div>
+                                        </div>
+
+                                        <div className="page-number">{index + 3}</div>
+                                    </>
+                                )}
                             </div>
                         </div>
                     ))}

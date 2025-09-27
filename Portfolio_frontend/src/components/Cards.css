@@ -8,10 +8,10 @@
 }
 
 .portfolio-header {
-  margin-bottom: 20px;
+  /* margin-bottom: 20px; */
   color: var(--primary-color);
-  font-size: 2.5rem;
-  font-weight: bold;
+  font-size: 2.1rem;
+  /* font-weight: bold; */
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
@@ -19,6 +19,90 @@
   display: inline-block;
   animation: float 3s ease-in-out infinite;
 }
+
+/* Smaller text elements within portfolio header */
+.deck-title-smaller {
+  font-size: 1.8rem !important;
+  margin: 10px 0;
+}
+
+.search-text-smaller {
+  font-size: 1.8rem !important;
+  display: inline;
+  white-space: nowrap;
+  color: #dc2626;
+}
+
+.search-text-smaller input {
+  height: 45px;
+  padding: 10px 15px;
+  font-size: 1.1rem;
+  border: 2px solid #dc2626;
+  border-radius: 8px;
+  background-color: white;
+  color: black;
+  margin: 0 10px;
+  outline: none;
+}
+
+.search-text-smaller input::placeholder {
+  color: #666;
+}
+
+.search-text-smaller input:focus {
+  box-shadow: 0 0 10px var(--primary-color);
+}
+
+/* Search container positioning */
+.search-container {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Responsive search styling */
+@media (max-width: 768px) {
+  .search-text-smaller input {
+    height: 40px;
+    padding: 8px 12px;
+    font-size: 1rem;
+    margin: 0 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .search-text-smaller input {
+    height: 35px;
+    padding: 6px 10px;
+    font-size: 0.9rem;
+    margin: 0 5px;
+  }
+
+  .search-container {
+    max-width: 95%;
+  }
+}
+
+/* Future additions space - Add your custom search styles below */
+
+/*
+  RESERVED SPACE FOR FUTURE ADDITIONS:
+
+  - Custom search filters
+  - Advanced search options
+  - Search history
+  - Saved searches
+  - Search analytics
+  - Additional search result styling
+  - Search shortcuts
+  - Voice search integration
+  - Auto-complete suggestions
+  - Search performance metrics
+
+  Add your custom CSS here:
+*/
 
 @keyframes float {
   0%, 100% { transform: translateY(0px); }
@@ -28,17 +112,18 @@
 /* Animated Deck Container */
 .deck-container {
   position: relative;
-  height: 300px;
-  margin: 20px auto;
+  height: 170px;
+  margin: auto;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
+  padding-top: 30px;
 }
 
 .deck_of_cards {
   position: relative;
-  width: 400px;
-  height: 250px;
+  width: 320px;
+  /* height: 200px; */
   cursor: pointer;
   border-radius: 15px;
   transition: all 0.3s ease;
@@ -224,8 +309,8 @@
 /* Cards Grid */
 .cards-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 15px;
   max-width: 1200px;
   margin: 0 auto;
   justify-items: center;
@@ -263,8 +348,8 @@
   }
   
   .deck_of_cards {
-    width: 350px;
-    height: 220px;
+    width: 280px;
+    height: 175px;
   }
   
   .portfolio-display {
@@ -281,8 +366,8 @@
   }
   
   .cards-grid {
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 15px;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 12px;
   }
 }
 
@@ -295,6 +380,14 @@
     font-size: 2rem;
     margin-bottom: 30px;
   }
+
+  .deck-title-smaller {
+    font-size: 1.7rem !important;
+  }
+
+  .search-text-smaller {
+    font-size: 1.7rem !important;
+  }
   
   .deck-container {
     height: 250px;
@@ -302,8 +395,8 @@
   }
   
   .deck_of_cards {
-    width: 300px;
-    height: 200px;
+    width: 240px;
+    height: 160px;
   }
   
   .portfolio-display {
@@ -347,8 +440,8 @@
   }
   
   .cards-grid {
-    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-    gap: 12px;
+    grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+    gap: 10px;
   }
   
   .deck-instructions {
@@ -377,14 +470,22 @@
   .portfolio-header {
     font-size: 1.8rem;
   }
+
+  .deck-title-smaller {
+    font-size: 1.5rem !important;
+  }
+
+  .search-text-smaller {
+    font-size: 1.5rem !important;
+  }
   
   .deck-container {
     height: 200px;
   }
   
   .deck_of_cards {
-    width: 250px;
-    height: 150px;
+    width: 200px;
+    height: 120px;
   }
   
   .portfolio-display {
@@ -407,8 +508,8 @@
   }
   
   .cards-grid {
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-    gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 8px;
   }
 }
 

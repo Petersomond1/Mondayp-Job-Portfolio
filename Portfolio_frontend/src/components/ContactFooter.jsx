@@ -10,6 +10,15 @@ const ContactFooter = () => {
 
   return (
     <div className="contact-footer-wrapper">
+
+        {/* <section className="home" id="home">
+      <div className="home-content">
+        <h1>Welcome Again to My Portfolio</h1>
+        <p>Hope you've discovered one or two things about my projects, skills, and experience.</p>
+        <a href="#about" className="btn">Learn More</a>
+      </div>
+    </section> */}
+
       {/* Contact Section */}
       <section id="contact" className="contact-section">
         <h1 className="header"><span>Contact</span></h1>

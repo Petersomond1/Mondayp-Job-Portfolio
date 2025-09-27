@@ -1,0 +1,220 @@
+/* SearchResults.css - Search dropdown styling */
+
+.search-results-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  max-width: 600px;
+  background: linear-gradient(135deg, rgba(0, 20, 40, 0.95), rgba(0, 30, 60, 0.95));
+  backdrop-filter: blur(15px);
+  border: 2px solid var(--primary-color);
+  border-radius: 15px;
+  box-shadow: 0 15px 35px rgba(0, 255, 157, 0.3);
+  z-index: 1000;
+  margin-top: 10px;
+  animation: searchDropdownAppear 0.3s ease-out;
+}
+
+@keyframes searchDropdownAppear {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
+.search-results-header {
+  padding: 15px 20px 10px;
+  border-bottom: 1px solid rgba(0, 255, 157, 0.3);
+  color: var(--primary-color);
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.search-results-list {
+  max-height: 400px;
+  overflow-y: auto;
+  padding: 10px 0;
+}
+
+.search-result-item {
+  padding: 15px 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-left: 3px solid transparent;
+  margin: 5px 0;
+}
+
+.search-result-item:hover {
+  background: linear-gradient(135deg, rgba(0, 255, 157, 0.15), rgba(0, 255, 157, 0.05));
+  border-left: 3px solid var(--primary-color);
+  transform: translateX(5px);
+}
+
+.result-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 8px;
+  gap: 15px;
+}
+
+.result-term {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.suit-icon {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.suit-icon.red {
+  color: #dc2626;
+}
+
+.suit-icon.black {
+  color: #333;
+  text-shadow: 0 0 2px white;
+}
+
+.result-location {
+  color: var(--primary-color);
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-align: right;
+  flex-shrink: 0;
+}
+
+.result-description {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.85rem;
+  line-height: 1.4;
+  margin-bottom: 8px;
+  padding-left: 0;
+}
+
+.result-action {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.click-hint {
+  color: var(--primary-color);
+  font-size: 0.75rem;
+  font-weight: 500;
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+
+.search-result-item:hover .click-hint {
+  opacity: 1;
+}
+
+.search-results-footer {
+  padding: 10px 20px 15px;
+  border-top: 1px solid rgba(0, 255, 157, 0.3);
+  text-align: center;
+  color: rgba(0, 255, 157, 0.7);
+  font-size: 0.8rem;
+}
+
+/* Scrollbar styling for search results */
+.search-results-list::-webkit-scrollbar {
+  width: 6px;
+}
+
+.search-results-list::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 3px;
+}
+
+.search-results-list::-webkit-scrollbar-thumb {
+  background: var(--primary-color);
+  border-radius: 3px;
+  opacity: 0.7;
+}
+
+.search-results-list::-webkit-scrollbar-thumb:hover {
+  opacity: 1;
+}
+
+/* Highlight effect for found cards */
+.search-highlight {
+  animation: searchHighlight 3s ease-in-out;
+  box-shadow: 0 0 20px var(--primary-color) !important;
+  transform: scale(1.05) !important;
+  z-index: 100 !important;
+}
+
+@keyframes searchHighlight {
+  0%, 100% {
+    box-shadow: 0 0 20px var(--primary-color);
+    transform: scale(1.05);
+  }
+  50% {
+    box-shadow: 0 0 30px var(--primary-color);
+    transform: scale(1.08);
+  }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .search-results-dropdown {
+    width: 95%;
+    margin-top: 8px;
+  }
+
+  .search-result-item {
+    padding: 12px 15px;
+  }
+
+  .result-main {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+  }
+
+  .result-location {
+    text-align: left;
+    font-size: 0.85rem;
+  }
+
+  .result-term {
+    font-size: 1rem;
+  }
+
+  .result-description {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .search-results-dropdown {
+    width: 98%;
+    border-radius: 10px;
+  }
+
+  .search-results-header {
+    padding: 12px 15px 8px;
+    font-size: 0.9rem;
+  }
+
+  .search-result-item {
+    padding: 10px 12px;
+  }
+
+  .search-results-footer {
+    padding: 8px 15px 12px;
+    font-size: 0.75rem;
+  }
+}

@@ -466,6 +466,113 @@
   border: 2px solid #e0e7ff;
 }
 
+/* Personal Introduction Page Styles */
+.personal-intro-page {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.welcome-section {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.welcome-section h3 {
+  color: #4f46e5;
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin: 0;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+.personal-intro-page h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin: 15px 0;
+  color: #2d1b69;
+}
+
+.personal-intro-page h2 .name {
+  color: #4f46e5;
+  font-weight: 700;
+}
+
+.intro-hr {
+  border: none;
+  height: 2px;
+  background: linear-gradient(45deg, #4f46e5, #7c3aed);
+  margin: 15px 0;
+  border-radius: 1px;
+}
+
+.intro-section {
+  flex: 1;
+  margin: 15px 0;
+}
+
+.intro-section p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #374151;
+  margin-bottom: 8px;
+  text-align: left;
+}
+
+.intro-section p strong {
+  color: #4f46e5;
+  font-weight: 700;
+}
+
+.intro2-section {
+  margin: 15px 0 20px 0;
+}
+
+.intro2-section p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #374151;
+  text-align: justify;
+  font-style: italic;
+}
+
+.intro-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+  flex-shrink: 0;
+}
+
+.hire-btn, .contact-btn {
+  background: linear-gradient(45deg, #4f46e5, #7c3aed);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 3px 10px rgba(79, 70, 229, 0.3);
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.hire-btn:hover, .contact-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 15px rgba(79, 70, 229, 0.4);
+}
+
+.intro-buttons span {
+  color: #6b7280;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
 .portfolio-text {
   margin: 15px 0 20px 0;
   flex: 1;

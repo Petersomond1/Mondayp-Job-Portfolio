@@ -21,10 +21,13 @@ const Navigation = () => {
 
   return (
     <nav>
-      <a href="#" className="logo">
-        <h1>Engr Mondayp</h1>
+      <a  className="logo">
+         <img src="./assets/picturepax.jpg" alt="Profile" className="profile-image" />
+        </a>
+        <div className="logo-text">
+        <h2>Engr Mondayp</h2>
         <h3>Job Portfolio</h3>
-      </a>
+      </div>
 
       <ul className="links">
         <li><a href="#home"><span style={{ marginLeft: "0px", marginBottom: '10px' }}>Home</span></a></li>

@@ -1,6 +1,8 @@
 import React, { useState, useEffect, useRef } from 'react';
 // import PlayingCard from './PlayingCard';
 import DeckCard from './DeckCard';
+import SearchResults from './SearchResults';
+import { searchSkillsRanked } from '../data/searchData';
 import './Cards.css';
 
 // Main Cards Component
@@ -9,8 +11,12 @@ const Cards = () => {
   const [isDeckSpread, setIsDeckSpread] = useState(false);
   const [selectedCardIndex, setSelectedCardIndex] = useState(null);
   const [displayedCard, setDisplayedCard] = useState(null);
+  const [searchQuery, setSearchQuery] = useState('');
+  const [searchResults, setSearchResults] = useState([]);
+  const [showSearchResults, setShowSearchResults] = useState(false);
   const deckRef = useRef(null);
   const portfolioSectionRef = useRef(null);
+  const searchInputRef = useRef(null);
 
   // Deck cards data (4 Aces + 2 Jokers)
   const deckCards = [
@@ -92,6 +98,49 @@ const Cards = () => {
     };
   }, [isDeckSpread]);
 
+  // Search functionality
+  useEffect(() => {
+    if (searchQuery.length >= 2) {
+      const results = searchSkillsRanked(searchQuery);
+      setSearchResults(results);
+      setShowSearchResults(true);
+    } else {
+      setSearchResults([]);
+      setShowSearchResults(false);
+    }
+  }, [searchQuery]);
+
+  // Handle search input changes
+  const handleSearchChange = (event) => {
+    setSearchQuery(event.target.value);
+  };
+
+  // Handle search result selection
+  const handleSearchResultClick = (result) => {
+    setShowSearchResults(false);
+    setSearchQuery('');
+    if (searchInputRef.current) {
+      searchInputRef.current.value = '';
+    }
+    console.log('Navigating to:', result.location, result.link);
+  };
+
+  // Handle clicks outside search to close results
+  useEffect(() => {
+    const handleClickOutsideSearch = (event) => {
+      if (searchInputRef.current &&
+          !searchInputRef.current.contains(event.target) &&
+          !event.target.closest('.search-results-dropdown')) {
+        setShowSearchResults(false);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutsideSearch);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutsideSearch);
+    };
+  }, []);
+
   const handleDeckClick = () => {
     setIsDeckSpread(!isDeckSpread);
   };
@@ -138,9 +187,30 @@ const Cards = () => {
 
   return (
     <section id="portfolio-cards" className="portfolio-cards-section" ref={portfolioSectionRef}>
-      <h1 className="portfolio-header">
-        <span>🎴 My Skills & Experience Deck</span>
-      </h1>
+      <p className="portfolio-header">
+        <span>🎴 Hey Recruiter! 🎴 </span>
+        <br />
+        <p className="deck-title-smaller">🎴 Deck my Cards of Skills & Experience 🎴 </p>
+     <div className="search-container" style={{ position: 'relative', display: 'inline-block' }}>
+       <span className="search-text-smaller">...search here
+         <input
+           ref={searchInputRef}
+           type="text"
+           placeholder="Search my skills, tech, projects..."
+           onChange={handleSearchChange}
+           onFocus={() => searchQuery.length >= 2 && setShowSearchResults(true)}
+         />
+         to locate...where i showcase
+       </span>
+       <SearchResults
+         results={searchResults}
+         onResultClick={handleSearchResultClick}
+         isVisible={showSearchResults}
+       />
+     </div>
+    <br />
+     <p>YOUR <i style={{ color: '#dc2626' }}>required </i>&  SOUGHT-AFTER SKILLS</p>
+      </p>
 
       {/* Animated Deck of Cards */}
       <div className="deck-container">
@@ -161,9 +231,11 @@ const Cards = () => {
               isSpread={isDeckSpread}
               onClick={(event) => handleCardClick(index, event)}
               isSelected={selectedCardIndex === getPortfolioCardIndex(index)}
+              dataSuit={card.suit}
             />
           ))}
         </div>
+          click in/out
       </div>
 
       {/* Dynamic Portfolio Card Display */}

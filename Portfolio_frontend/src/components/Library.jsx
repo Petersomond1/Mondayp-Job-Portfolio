@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './Library.css';
 
-const Library = ({ onBookClick }) => {
+const Library = ({ onBookClick, videoTransitioned }) => {
   const [fallingBook, setFallingBook] = useState(null);
 
   const books = [
@@ -28,7 +28,7 @@ const Library = ({ onBookClick }) => {
   };
 
   return (
-    <section className="library-section" id="library">
+    <section className={`library-section ${videoTransitioned ? 'visible' : 'hidden'}`} id="library">
       <div className="library-container">
         <div className="library-header">
           <h1>📚 My Portfolio Library</h1>
@@ -58,8 +58,8 @@ const Library = ({ onBookClick }) => {
                   <div className="spine-text">
                     <span className="spine-title">{book.title}</span>
                     <span className="spine-volume">{book.volume}</span>
-                    <span className="spine-author">Mondayp</span>
                   </div>
+                  <div className="spine-author">Mondayp</div>
                   <div className="book-decoration">
                     <div className="decoration-line"></div>
                     <div className="decoration-line"></div>
